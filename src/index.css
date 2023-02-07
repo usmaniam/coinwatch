@@ -4,18 +4,20 @@
 
 @import "tailwindcss/utilities";
 
+
 :root {
     @apply bg-primary text-primary
-}
-
+  }
+  
 .rounded-div {
     @apply border border-secondary rounded-2xl shadow-xl bg-primary px-2 max-w-[1140px] w-full mx-auto
-}
+  }
+
 
 .dark {
-    --color-bg-primary: #2d3748;
-    --color-bg-primary: #2d3748;
-    --color-bg-secondary: #283141;
+    --color-bg-primary: #0f172a;
+  
+    --color-bg-secondary: #0d162d;
     --color-text-primary: #dbdbdb;
     --color-text-secodary: #e2e8f0;
     --color-text-accent: #81e6d9;
@@ -24,7 +26,7 @@
 }
 
 .light {
-    --color-bg-primary: #f5f5f5;
+    --color-bg-primary: #ffffff;
     --color-bg-secondary: #edf2f7;
     --color-text-primary: #2d3748;
     --color-text-secodary: #4a5568;

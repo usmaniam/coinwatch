@@ -1,10 +1,11 @@
+import Navbar from './components/Navbar';
+import { ThemeProvider } from './context/ThemeContext'
+
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">
-        coinwatch
-      </h1>
-    </div>
+    <ThemeProvider>
+      <Navbar />
+    </ThemeProvider>
   )
 }
 

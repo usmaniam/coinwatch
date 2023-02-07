@@ -6,11 +6,11 @@ const getInitialTheme = () => {
         if (typeof storedPrefs === 'string') {
             return storedPrefs
         }
-        
-        const userMedia = window.matchMedia('()prefers-color-scheme: dark')
+
+        const userMedia = window.matchMedia('(prefers-color-scheme: dark)')
         if (userMedia.matches) {
             return 'dark'
-        }
+        } 
     }
     return 'light'
 }
@@ -21,25 +21,25 @@ export const ThemeProvider = ({initialTheme, children}) => {
     const [theme, setTheme] = useState(getInitialTheme)
 
     const rawSetTheme = (theme) => {
-        const root = window.document.documentElemment;
+        const root = window.document.documentElement;
         const isDark = theme === 'dark'
 
-        root.classlist.remove(isDark ? 'light' : 'dark')
-        root.classlist.add(theme)
+        root.classList.remove(isDark ? 'light' : 'dark')
+        root.classList.add(theme)
 
-        localStorage.setIteam('color-theme', theme)
+        localStorage.setItem('color-theme', theme)
     }
 
     if (initialTheme) {
         rawSetTheme(initialTheme)
     }
 
-    useEffect(()=>{
+    useEffect(()=> {
         rawSetTheme(theme)
     },[theme])
 
     return (
-        <ThemeContext.Provider value={{theme, setTheme}}>
+        <ThemeContext.Provider value={{theme,setTheme}}>
             {children}
         </ThemeContext.Provider>
     )
