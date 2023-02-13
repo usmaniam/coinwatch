@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ThemeToggle from "./ThemeToggle"
+import ThemeSwitch from "./ThemeSwitch"
 import {HiMenuAlt3} from 'react-icons/hi'
 import {AiOutlineClose} from 'react-icons/ai'
 import { useState } from "react"
@@ -16,21 +16,21 @@ const Navbar = () => {
   return (
     <div className='rounded-div h-20 flex items-center justify-between font-bold'>
         <Link to='/'>
-            <h1 className='text-2xl'>Coinwatch</h1>
+            <h1 className='text-2xl font-extrabold'>Coinwatch<span className='text-accent font-extrabold'>_</span></h1>
         </Link>
         <div className='hidden md:block'>
-            <ThemeToggle />
+            <ThemeSwitch />
         </div>
          <div className='hidden md:block'>
-            <Link to='/signin' className='p-4 hover:text-accent'>
-                Sign In
+            <Link to='/about' className='p-4 hover:text-accent'>
+                About Us
             </Link>
-            <Link to='/signup' className='bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl'>
-                Sign Up
+            <Link to='/contact' className='bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl'>
+                Contact Us
             </Link>
          </div>
         {/* Menu */}
-         <div onClick={handleNav} className="block md:hidden cursor-pointer z-10">
+         <div onClick={handleNav} className="block md:hidden cursor-pointer z-10 hover:text-accent">
           {nav ? <AiOutlineClose size={25} /> : <HiMenuAlt3 size={25} />}
          </div>
 
@@ -41,28 +41,19 @@ const Navbar = () => {
             : 'fixed left-[-100%] top-20 h-[90%] flex flex-col items-center justify-between ease-in duration-300'
         }>
             <ul className='w-full p-4'>
-                <li onClick={handleNav} className="border-b py-6">
+                <li onClick={handleNav} className="border-b py-6 hover:text-accent">
                     <Link to='/'>Home</Link>
                 </li>
-                <li onClick={handleNav} className="border-b py-6">
-                   <Link to='/account'>Account</Link>
+                <li onClick={handleNav} className="border-b py-6 hover:text-accent">
+                   <Link to='/about'>About Us</Link>
                 </li>
-                <li className="py-6">
-                    <ThemeToggle />
+                <li onClick={handleNav} className="border-b py-6 hover:text-accent">
+                   <Link to='/contact'>Contact Us</Link>
                 </li>
-            </ul>
-            <div className="flex flex-col w-full p-4">
-                <Link to='/signin'>
-                    <button className="w-full my-2 p-3 bg-primary text-primary border border-secondary rounded-2xl shadow-x1">
-                        Sign In
-                    </button>
-                </Link>
-                <Link to='/signup'>
-                    <button className="w-full my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl">
-                        Sign Up
-                    </button>
-                </Link>
-            </div>
+                <li className="py-6 hover:text-accent">
+                    <ThemeSwitch />
+                </li>
+            </ul>          
         </div>
     </div>
   )
