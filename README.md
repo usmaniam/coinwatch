@@ -1,4 +1,3 @@
-
 # Coinwatch - Crypto market app
 
 A web app built with ReactJS and styled with Tailwind CSS. It fetches crypto market data from an external API and display it beautifully. 
@@ -9,9 +8,10 @@ Some of the packages I used in the project include:
 
 - React-Icons: for all icons in the project.
 - React-router-dom: for handling rounting in the application.
-## Demo
+## Screenshots
 
 [![coinwatch-usmaniam-netlify-app-1024x768desktop-940c05.png](https://i.postimg.cc/qBtgdJRx/coinwatch-usmaniam-netlify-app-1024x768desktop-940c05.png)](https://postimg.cc/xq29vSLX)
+## Demo
 
 https://coinwatch-usmaniam.netlify.app/
 
