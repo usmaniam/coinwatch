@@ -11,6 +11,8 @@ Some of the packages I used in the project include:
 - React-router-dom: for handling rounting in the application.
 ## Demo
 
+[![coinwatch-usmaniam-netlify-app-1024x768desktop-940c05.png](https://i.postimg.cc/qBtgdJRx/coinwatch-usmaniam-netlify-app-1024x768desktop-940c05.png)](https://postimg.cc/xq29vSLX)
+
 https://coinwatch-usmaniam.netlify.app/
 
 
